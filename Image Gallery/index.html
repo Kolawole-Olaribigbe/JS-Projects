@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-wrap">
+        <img src="img/arrow (2).png" id="leftScroll">
+        <div class="gallery">
+            <div>
+                <span><img src="img/IMG_1945.JPG" alt=""></span>
+                <span><img src="img/IMG_1946.JPG" alt=""></span>
+                <span><img src="img/IMG_1951.JPG" alt=""></span>
+            </div>
+            <div>
+                <span><img src="img/IMG_1978.JPG" alt=""></span>
+                <span><img src="img/IMG_1979.JPG" alt=""></span>
+                <span><img src="img/VNEO7298.JPG" alt=""></span>
+            </div>
+        </div>
+        <img src="img/arrow (3).png" id="rightScroll">
+    </div>
+<script>
+    let scrollContainer = document.querySelector(".gallery")
+    let leftScroll = document.getElementById("leftScroll")
+    let rightScroll = document.getElementById("rightScroll")
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+        evt.preventDefault()
+        scrollContainer.scrollLeft += evt.deltaY
+        scrollContainer.style.scrollBehavior = "auto"
+    })
+
+    rightScroll.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior = "smooth"
+        scrollContainer.scrollLeft += 900
+    })
+    
+    leftScroll.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior = "smooth"
+        scrollContainer.scrollLeft -= 900
+    })
+</script>
+</body>
+</html>
