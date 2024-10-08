@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="gallery">
+                <img src="img/zen-black-clear-retro-ps5-controller-by-killscreen_0007_main.jpg" id="productImg">
+                <div class="controls">
+                    <span class="btn active"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                </div>
+            </div>
+                <div class="details">
+                    <h1>Zen Black Clear Retro Ps5 Controller</h1>
+                    <h2>$170.00</h2>
+                    <h3>30% OFF</h3>
+                    <p>After 22 years, the legend returns. The Zen Black PS5 DualSense controller exclusively by Killscreen. 
+                        Meticulously color-matched to the iconic Japan-exclusive PS2 DualShock 2 (SCPH-10010BI), this controller brings unparalleled style to your arsenal. 
+                        We've also incorporated distinctive DualShock-style features, 
+                        including a higher sloped DS4-style D-pad and flat top button layout with pastel shapes, offering both classic design and modern performance.</p>
+                        <form>
+                            <div class="color-select">
+                                <p>Color</p>
+                                <label for="red">
+                                    <input type="radio" name="color" id="red">
+                                    <span>Red</span>
+                                </label>
+                                <label for="blue">
+                                    <input type="radio" name="color" id="blue">
+                                    <span>Blue</span>
+                                </label>
+                                <label for="white">
+                                    <input type="radio" name="color" id="white">
+                                    <span>White</span>
+                                </label>
+                                <label for="purple">
+                                    <input type="radio" name="color" id="purple">
+                                    <span>Purple</span>
+                                </label>
+                            </div>
+                            <div class="type-select">
+                                <p>Type</p>
+                                <label for="solid">
+                                    <input type="radio" name="type" id="solid">
+                                    <span class="type-1"></span>
+                                </label>
+                                <label for="clear">
+                                    <input type="radio" name="type" id="clear">
+                                    <span class="type-2"></span>
+                                </label>
+                                <label for="gloss">
+                                    <input type="radio" name="type" id="crystal">
+                                    <span class="type-3"></span>
+                                </label>
+                                <label for="matte">
+                                    <input type="radio" name="type" id="solid">
+                                    <span class="type-4"></span>
+                                </label>
+                            </div>
+                            <div class="quantity-select">
+                                <p>Quantity</p>
+                                <input type="number" value="1">
+                            </div>
+                            <button>Buy</button>
+                        </form>
+                </div>
+        </div>
+    </div>
+    <script>
+        let productImg = document.getElementById("productImg")
+        let btn = document.getElementsByClassName("btn")
+
+        btn[0].onclick = function(){
+            productImg.src = "img/zen-black-clear-retro-ps5-controller-by-killscreen_0003_front-angle.jpg"
+
+            for(bt of btn){
+                bt.classList.remove("active")
+            }
+            this.classList.add("active")
+        }
+        btn[1].onclick = function(){
+            productImg.src = "img/zen-black-clear-retro-ps5-controller-by-killscreen_0006_shape-buttons.jpg"
+
+            for(bt of btn){
+                bt.classList.remove("active")
+            }
+            this.classList.add("active")
+        }
+        btn[2].onclick = function(){
+            productImg.src = "img/zen-black-clear-retro-ps5-controller-by-killscreen_0004_front.jpg"
+
+            for(bt of btn){
+                bt.classList.remove("active")
+            }
+            this.classList.add("active")
+        }
+    </script>
+</body>
+</html>
