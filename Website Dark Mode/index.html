@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6f145ebea0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="img/computer.png" class="logo">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">PORTFOLIO</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">HIRE ME</a></li>
+            </ul>
+            <img src="img/moon.png" id="icon">
+        </nav>
+        <div class="info">
+            <h1>I'm <span>Kola</span> Olaribigbe</h1>
+            <p>This is my prototype portfolio website to show 
+                <br>the progress i'm making on my journey to becoming a software architect</p>
+                <a href="">Download CV</a>
+        </div>
+
+        <div class="social-links">
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-square-behance"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+    <script>
+        var icon = document.getElementById("icon")
+
+        icon.onclick = function (){
+            document.body.classList.toggle("dark-theme")
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "img/brightness.png"
+            }else{
+                icon.src = "img/moon.png"
+            }
+        }
+    </script>
+</body>
+</html>
